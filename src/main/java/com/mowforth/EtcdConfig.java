@@ -6,7 +6,6 @@ import com.google.common.collect.ImmutableMap;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigValueFactory;
 import jetcd.EtcdClient;
-import jetcd.EtcdClientFactory;
 import jetcd.EtcdException;
 
 import java.util.Map;
@@ -63,12 +62,6 @@ public class EtcdConfig {
 
     public static void seedConfig(EtcdClient client, Config config) throws EtcdException {
         Map<String, Object> tree = config.root().unwrapped();
-        
-    }
 
-    public static void main(String[] args) throws Exception {
-        EtcdClient client = EtcdClientFactory.newInstance();
-        Map m = deepList(client, "/");
-        Config conf = getConfig(m);
     }
 }
