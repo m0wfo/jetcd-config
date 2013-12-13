@@ -1,0 +1,7 @@
+{
+    "node0": {
+        "port": 1337,
+        "bind": "0.0.0.0",
+        "components": ["one", "two", "three"]
+    }
+}
